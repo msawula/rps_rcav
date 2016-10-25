@@ -1,0 +1,39 @@
+<head>
+
+  <!-- Connect to Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+
+</head>
+
+
+<body>
+
+  <a href="http://localhost:3000/paper">Play Rock </a>
+  <a href="http://localhost:3000/paper">Play Paper </a>
+  <a href="http://localhost:3000/scissors">Play Scissors </a>
+
+
+
+<p> You played Paper.</p>
+<img src="http://localhost:3000/assets/images/paper.png"
+width="200">
+
+<p>
+  The computer played <%= @computer_move %>.
+  <p>
+
+    <% if @computer_move == "rock" %>
+    <img src="http://localhost:3000/assets/images/rock.png"
+    width="200">
+    <h3> You won! </h3>
+    <% elsif @computer_move == 'paper'%>
+    <img src="http://localhost:3000/assets/images/paper.png"
+    width="200">
+    <h3> You tied! </h3>
+    <% elsif @computer_move == 'scissors'%>
+    <img src="http://localhost:3000/assets/images/scissors.png"
+    width="200">
+    <h3> You lost! </h3>
+
+    <% end %>
+</body>
